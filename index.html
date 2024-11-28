@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Geison</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="Imagenes/Terno.jpeg" alt="">
+            </div>
+            <h1>Geison C.Samaniego</h1>
+            <h2>Estudiante En Ingenieria de Sistemas</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/Live.Love.Sammy?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://wa.me/923194497"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/Live.Love.Sammy?mibextid=ZbWKwL"><i class="fa-brands fa-instagram"></i></a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Geison.</span> Soy estudiante de Ingeniería de Sistemas en Computación en la Universidad Peruana Los Andes. Apasionado por la tecnología y el aprendizaje continuo, siempre estoy buscando nuevas formas de explorar el mundo de la informática.
+                A lo largo de mi carrera, he desarrollado habilidades en diversas áreas, desde programación hasta diseño de software. <br> 
+                Me considero una persona divertida y creativa, lo que me permite abordar los desafíos con una perspectiva fresca y original. <br>
+                Además, me encanta colaborar con otros y aprender de sus experiencias, porque creo que cada interacción es una oportunidad para crecer.
+                <br> ¡Gracias por visitar mi portafolio! Estoy emocionado de compartir mis proyectos y experiencias contigo.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Nacimiento</strong>
+                            13-07-2004
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            923 194 497
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            geison.c.samaniego@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Lima Ate, Peru
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Estudiante De Ing. De Sistemas Y Computacion</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <div class="contenido-seccion">
+        <h2>PORTFOLIO</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <a href="BaseDatos.html"> <!-- enlace al índice correspondiente -->
+                    <img src="Imagenes/BaseDatos.jpeg" alt="Máquinas Virtuales">
+                    <div class="overlay">
+                        <h3> Base De Datos 2</h3>
+                        <p>Portafolio</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">               
+                <img src="Imagenes/Cableado.jpg" alt="Cableado Estructurado">
+                <div class="overlay">
+                    <h3>Cableado Estructurado</h3>
+                    <p>Fotografía de proyecto</p>
+                </div>
+            </div>
+            <div class="proyecto">
+                <a href=""> <!-- Cambia el enlace al índice correspondiente -->
+                    <img src="Imagenes/MaqVir2.jpg" alt="Diseño Creativo">
+                    <div class="overlay">
+                        <h3>Maquinas Virtuales</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </a>
+            </div>
+            
+
+        </div>
+    </div>
+</section>
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="Imagenes/Terno.jpeg" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                lima ate, Peru
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Contactame al: 923194497
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: Geison.c.samaniego@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
