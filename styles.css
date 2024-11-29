@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 /* MENU */
-.contenedor-header{
+.contenedor-header {
     background: #1e2326;
     position: fixed;
     width: 100%;
@@ -18,7 +18,8 @@ html{
     left: 0;
     z-index: 99;
 }
-.contenedor-header header{
+
+.contenedor-header header {
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -26,17 +27,20 @@ html{
     align-items: center;
     padding: 15px 20px;
 }
-.contenedor-header header .logo a{
+
+.contenedor-header header .logo a {
     font-family: 'Righteous';
     font-size: 36px;
     color: #1CB698;
     text-decoration: none;
 }
-.contenedor-header header ul{
+
+.contenedor-header header ul {
     display: flex;
     list-style: none;
 }
-.contenedor-header header nav ul li a{
+
+.contenedor-header header nav ul li a {
     text-align: none;
     color: #fff;
     margin: 0 15px;
@@ -44,17 +48,54 @@ html{
     transition: .5s;
     text-decoration: none;
 }
-.contenedor-header header nav ul li a:hover{
+
+/* Estilo al pasar el mouse por los enlaces del menú */
+.contenedor-header header nav ul li a:hover {
     color: #1CB698;
 }
-.nav-responsive{
+
+/* Submenú bajo LIBROS */
+.contenedor-header header nav ul li.libros {
+    position: relative; /* Necesario para posicionar el submenú */
+}
+
+.contenedor-header header nav ul li.libros .sub-menu {
+    display: none; /* El submenú está oculto por defecto */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #1e2326;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li.libros:hover .sub-menu {
+    display: block; /* Se muestra el submenú al pasar el mouse sobre LIBROS */
+}
+
+.contenedor-header header nav ul li .sub-menu li a {
+    color: #fff;
+    padding: 8px 20px;
+    display: block;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contenedor-header header nav ul li .sub-menu li a:hover {
     background-color: #1CB698;
-    color:#fff;
+    color: #fff;
+}
+
+/* Para el menú responsive */
+.nav-responsive {
+    background-color: #1CB698;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     display: none;
 }
+
 /* SECCION I N I C I O */
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
