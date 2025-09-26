@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio de Geison</title>
+  <link rel="stylesheet" href="index.css"/>
+  <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a2e0e6e6f5.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.7.1/dist/supabase.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <div class="contenedor-header">
+    <header>
+      <div class="logo">
+        <a href="../index.html">Geison</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#trabajos">Trabajos</a></li>
+          <li><a href="#" id="btn-login">Iniciar sesión</a></li>
+        </ul>
+      </nav>
+      <div class="nav-responsive">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+  </div>
+
+  <!-- ===== LOGIN ===== -->
+  <div id="login-popup" class="login-popup oculto">
+    <form class="login-form">
+      <h2>Iniciar Sesión</h2>
+      <input type="email" placeholder="Correo electrónico" required />
+      <input type="password" placeholder="Contraseña" required />
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <!-- ===== INICIO ===== -->
+  <section class="inicio" id="inicio">
+    <div class="contenido-banner">
+      <h1>Bienvenido, Geison</h1>
+      <h2>Portafolio Universitario</h2>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO (16 Semanas) ===== -->
+  <section class="portfolio" id="trabajos">
+    <div class="contenido-seccion">
+      <h2>Mis Trabajos - 16 Semanas</h2>
+
+      <!-- Botón subir documento admin -->
+      <button id="subir-doc" class="subir-doc">Subir Documento</button>
+
+      <div class="galeria">
+        <div class="proyecto"><div class="overlay"><h3>Semana 1</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 2</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 3</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 4</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 5</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 6</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 7</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 8</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 9</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 10</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 11</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 12</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 13</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 14</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 15</h3></div></div>
+        <div class="proyecto"><div class="overlay"><h3>Semana 16</h3></div></div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
