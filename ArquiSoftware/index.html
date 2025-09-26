@@ -1,80 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portafolio de Geison</title>
-  <link rel="stylesheet" href="index.css"/>
-  <script defer src="script.js"></script>
-  <script src="https://kit.fontawesome.com/a2e0e6e6f5.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.7.1/dist/supabase.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- ===== HEADER ===== -->
-  <div class="contenedor-header">
-    <header>
-      <div class="logo">
-        <a href="../index.html">Geison</a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#trabajos">Trabajos</a></li>
-          <li><a href="#" id="btn-login">Iniciar sesión</a></li>
-        </ul>
-      </nav>
-      <div class="nav-responsive">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </header>
-  </div>
-
-  <!-- ===== LOGIN ===== -->
-  <div id="login-popup" class="login-popup oculto">
-    <form class="login-form">
-      <h2>Iniciar Sesión</h2>
-      <input type="email" placeholder="Correo electrónico" required />
-      <input type="password" placeholder="Contraseña" required />
-      <button type="submit">Entrar</button>
-    </form>
-  </div>
-
-  <!-- ===== INICIO ===== -->
-  <section class="inicio" id="inicio">
-    <div class="contenido-banner">
-      <h1>Bienvenido, Geison</h1>
-      <h2>Portafolio Universitario</h2>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="https://api.whatsapp.com/send/?phone=923194497&text&type=phone_number&app_absent=0">Geison</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
     </div>
-  </section>
 
-  <!-- ===== PORTFOLIO (16 Semanas) ===== -->
-  <section class="portfolio" id="trabajos">
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="Imagenes/Terno.jpeg" alt="">
+            </div>
+            <h1>Geison C.Samaniego</h1>
+            <h2>Estudiante En Ingenieria de Sistemas</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/Live.Love.Sammy?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://wa.me/923194497"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/Live.Love.Sammy?mibextid=ZbWKwL"><i class="fa-brands fa-instagram"></i></a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Geison.</span> Soy estudiante de Ingeniería de Sistemas en Computación en la Universidad Peruana Los Andes. Apasionado por la tecnología y el aprendizaje continuo, siempre estoy buscando nuevas formas de explorar el mundo de la informática.
+                A lo largo de mi carrera, he desarrollado habilidades en diversas áreas, desde programación hasta diseño de software. <br> 
+                Me considero una persona divertida y creativa, lo que me permite abordar los desafíos con una perspectiva fresca y original. <br>
+                Además, me encanta colaborar con otros y aprender de sus experiencias, porque creo que cada interacción es una oportunidad para crecer.
+                <br> ¡Gracias por visitar mi portafolio! Estoy emocionado de compartir mis proyectos y experiencias contigo.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Nacimiento</strong>
+                            13-07-2004
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            923 194 497
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            geison.c.samaniego@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Lima Ate, Peru
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Estudiante De Ing. De Sistemas Y Computacion</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
     <div class="contenido-seccion">
-      <h2>Mis Trabajos - 16 Semanas</h2>
+        <h2>PORTFOLIO</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <a href="BaseDatos.html"> <!-- enlace al índice correspondiente -->
+                    <img src="Imagenes/BaseDatos.jpeg" alt="Máquinas Virtuales">
+                    <div class="overlay">
+                        <h3> Base De Datos 2</h3>
+                        <p>Portafolio</p>
+                    </div>
+                </a>
+            </div>
+            <div class="proyecto">               
+                <img src="Imagenes/Cableado.jpg" alt="Cableado Estructurado">
+                <div class="overlay">
+                    <h3>Cableado Estructurado</h3>
+                    <p>Fotografía de proyecto</p>
+                </div>
+            </div>
 
-      <!-- Botón subir documento admin -->
-      <button id="subir-doc" class="subir-doc">Subir Documento</button>
-
-      <div class="galeria">
-        <div class="proyecto"><div class="overlay"><h3>Semana 1</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 2</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 3</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 4</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 5</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 6</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 7</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 8</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 9</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 10</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 11</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 12</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 13</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 14</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 15</h3></div></div>
-        <div class="proyecto"><div class="overlay"><h3>Semana 16</h3></div></div>
-      </div>
+            <div class="proyecto">
+                <a href="ArquiSoftware/index.html"> <!-- enlace al índice correspondiente -->
+                    <img src="Imagenes/Arqui1.jpg" alt="Máquinas Virtuales">
+                    <div class="overlay">
+                        <h3> Arquitectura de software </h3>
+                        <p>Portafolio</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="Imagenes/Terno.jpeg" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                lima ate, Peru
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Contactame al: 923194497
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: Geison.c.samaniego@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </footer>
+    <script src="script.js"></script>
+
+      
 </body>
 </html>
