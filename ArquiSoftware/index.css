@@ -195,3 +195,7 @@ html {
 .subir-doc:hover {
     background-color: #17a288;
 }
+.oculto {
+    display: none;
+}
+
