@@ -1,0 +1,211 @@
+/* ====== VARIABLES ====== */
+:root {
+  --primary-color: #1CB698;  
+  --secondary-color: #1CB698;
+  --bg-color: #f8fcfb;
+  --text-color: #333;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --radius: 10px;
+}
+
+/* ====== RESETEO ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ====== HEADER ====== */
+.header {
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btn {
+  background: #fff;
+  color: var(--primary-color);
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+/* ====== TITULOS ====== */
+.section-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ====== SEMANAS ====== */
+.semana-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+}
+
+.semana-scroll button {
+  background: #fff;
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.semana-scroll button.active,
+.semana-scroll button:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* ====== DOCUMENTOS ====== */
+#week-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.doc-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.doc-item a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.doc-item a:hover {
+  color: var(--secondary-color);
+}
+
+/* ====== UPLOAD (ADMIN) ====== */
+#upload-section {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#upload-input {
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius);
+}
+
+/* ====== MODAL LOGIN ====== */
+.modal {
+  display: none;       /* oculto por defecto */
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex;       /* se muestra al agregar la clase .show */
+}
+
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.close:hover {
+  color: var(--secondary-color);
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: #fff;
+}
